@@ -5,7 +5,13 @@ namespace Address_Book
 {
     class Program
     {
-
+        public class Contact
+        {
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Address { get; set; }
+            public string Email { get; set; }
+        }
         /*
             1. Add the required classes to make the following code compile.
             HINT: Use a Dictionary in the AddressBook class to store Contacts. The key should be the contact's email address.
@@ -19,18 +25,38 @@ namespace Address_Book
         static void Main(string[] args)
         {
             Console.WriteLine("Is this even working?");
-            // List<string> Contacts = new List<string>()
-            // {
-            //     "Bob",
-            //     "Sue",
-            //     "Juan"
-            // };
+            List<Contact> contacts = new List<Contact>()
+            {
+                new Contact()
+                {
+                FirstName = "Sue",
+                LastName = "Jones",
+                Email = "sue.jones@email.com",
+                Address = "322 Hard Way, Testville, TN 11111"
+                },
+                new Contact()
+                {
+                FirstName = "Bob",
+                LastName = "Smith",
+                Email = "bob.smith@email.com",
+                Address = "100 Some Ln, Testville, TN 11111"
+                },
+                new Contact()
+                {
+                FirstName = "Juan",
+                LastName = "Lopez",
+                Email = "juan.lopez@email.com",
+                Address = "888 Easy St, Testville, TN 11111"
+                }
+            };
             // Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
             // Contacts.Add("ME!");
             // Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
             // Contacts.Remove("ME!");
             // Contacts.ForEach(contact => Console.WriteLine($"Sad to see you go ): {contact}"));
-            Dictionary<string, string> AddressDictionary = new Dictionary<string, string>() { { "Bob", "100 Some Ln, Testville, TN 11111" }, { "Sue", "322 Hard Way, Testville, TN 11111" }, { "Juan", "888 Easy St, Testville, TN 11111" } };
+            Dictionary<string, string> AddressDictionary = new Dictionary<string, string>()
+            { { "Bob", "100 Some Ln, Testville, TN 11111" }, { "Sue", "322 Hard Way, Testville, TN 11111" }, { "Juan", "888 Easy St, Testville, TN 11111" }
+            };
             foreach (KeyValuePair<string, string> person in AddressDictionary)
             {
                 Console.WriteLine($"{person.Key} lives at {person.Value}");
