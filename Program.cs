@@ -19,20 +19,22 @@ namespace Address_Book
         static void Main(string[] args)
         {
             Console.WriteLine("Is this even working?");
-            List<string> Contacts = new List<string>()
+            // List<string> Contacts = new List<string>()
+            // {
+            //     "Bob",
+            //     "Sue",
+            //     "Juan"
+            // };
+            // Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
+            // Contacts.Add("ME!");
+            // Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
+            // Contacts.Remove("ME!");
+            // Contacts.ForEach(contact => Console.WriteLine($"Sad to see you go ): {contact}"));
+            Dictionary<string, string> AddressDictionary = new Dictionary<string, string>() { { "Bob", "100 Some Ln, Testville, TN 11111" }, { "Sue", "322 Hard Way, Testville, TN 11111" }, { "Juan", "888 Easy St, Testville, TN 11111" } };
+            foreach (KeyValuePair<string, string> person in AddressDictionary)
             {
-                "Bob",
-                "Sue",
-                "Juan"
-            };
-            Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
-            Contacts.Add("ME!");
-            Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
-            Contacts.Remove("ME!");
-            Contacts.ForEach(contact => Console.WriteLine($"Sad to see you go ): {contact}"));
-            //     Dictionary<string> AddressDictionary = new Dictionary<string>()
-            //     {
-            //         {
+                Console.WriteLine($"{person.Key} lives at {person.Value}");
+            }
             //         "100 Some Ln, Testville, TN 11111"
             //         }
             //         }
