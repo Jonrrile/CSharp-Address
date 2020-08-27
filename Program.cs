@@ -19,6 +19,13 @@ namespace Address_Book
         static void Main(string[] args)
         {
             Console.WriteLine("Is this even working?");
+            List<string> Contacts = new List<string>()
+            {
+                "Bob",
+                "Sue",
+                "Juan"
+            };
+            Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
             //     Dictionary<string> AddressDictionary = new Dictionary<string>()
             //     {
             //         {
