@@ -28,6 +28,8 @@ namespace Address_Book
             Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
             Contacts.Add("ME!");
             Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
+            Contacts.Remove("ME!");
+            Contacts.ForEach(contact => Console.WriteLine($"Sad to see you go ): {contact}"));
             //     Dictionary<string> AddressDictionary = new Dictionary<string>()
             //     {
             //         {
