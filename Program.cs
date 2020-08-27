@@ -26,6 +26,8 @@ namespace Address_Book
                 "Juan"
             };
             Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
+            Contacts.Add("ME!");
+            Contacts.ForEach(contact => Console.WriteLine($"Welcome {contact}!"));
             //     Dictionary<string> AddressDictionary = new Dictionary<string>()
             //     {
             //         {
